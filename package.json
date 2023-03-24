@@ -4,12 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "postinstall": "spago install",
     "dev": "concurrently \"pnpm run dev:tailwind\" \"vite\"",
     "dev:tailwind": "tailwindcss -i src/style.css -o public/style.css --watch",
     "build": "pnpm run build:tailwind && pnpm run build:purescript && vite build",
     "build:purescript": "spago build",
     "build:tailwind": "tailwindcss -i src/style.css -o public/style.css --minify",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "clean": "rm -rf node_modules .spago dist output .purs-repl"
   },
   "devDependencies": {
     "concurrently": "^7.6.0",
