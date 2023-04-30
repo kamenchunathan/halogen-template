@@ -50,15 +50,15 @@ render { count } =
             [ HP.class_ $ ClassName "flex justify-center space-x-8" ]
             [ HH.button
                 [ HP.class_ $ ClassName "text-white text-center text-xl p-2 bg-gray-400 rounded-xl"
-                , HE.onClick \_ -> Increment
-                ]
-                [ HH.text "Increment" ]
-            , HH.button
-                [ HP.class_ $ ClassName "text-white text-center text-xl p-2 bg-gray-400 rounded-xl"
                 , HE.onClick \_ -> Decrement
                 ]
                 [ HH.text "Decrement" ]
-            ]
+        ,HH.button
+                [ HP.class_ $ ClassName "text-white text-center text-xl p-2 bg-gray-400 rounded-xl"
+                , HE.onClick \_ -> Increment
+                ]
+                [ HH.text "Increment" ]
+                ]
         ]
     ]
 
