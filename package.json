@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "postinstall": "spago install",
-    "dev": "vite",
+    "dev": "pnpm run build:purescript && vite",
     "build": "pnpm run build:purescript && vite build",
     "build:purescript": "spago build",
     "preview": "vite preview",
